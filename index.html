@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKM Musik Kampus - Wadah Kreasi Musisi Muda</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom gradient for hero */
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(17, 24, 39, 1) 5%, rgba(17, 24, 39, 0.6) 50%, rgba(17, 24, 39, 1) 95%);
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.25rem; /* text-4xl */
+            line-height: 2.5rem;
+            letter-spacing: -0.025em;
+        }
+        .section-subtitle {
+            font-size: 1.125rem; /* text-lg */
+            color: #d1d5db; /* text-gray-300 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- == HEADER & NAVIGASI == -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 text-xl font-bold text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z" />
+                    </svg>
+                    <span>UKM MUSIK</span>
+                </a>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#tentang" class="text-gray-300 hover:text-amber-500 transition">Tentang Kami</a>
+                    <a href="#divisi" class="text-gray-300 hover:text-amber-500 transition">Divisi</a>
+                    <a href="#galeri" class="text-gray-300 hover:text-amber-500 transition">Galeri</a>
+                    <a href="#event" class="text-gray-300 hover:text-amber-500 transition">Event</a>
+                    <a href="#pendaftaran" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Gabung Sekarang</a>
+                </div>
+
+                <!-- Tombol Menu Mobile -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i data-feather="menu" class="text-white"></i>
+                </button>
+            </nav>
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#tentang" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800 rounded">Tentang Kami</a>
+                <a href="#divisi" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800 rounded">Divisi</a>
+                <a href="#galeri" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800 rounded">Galeri</a>
+                <a href="#event" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800 rounded">Event</a>
+                <a href="#pendaftaran" class="block mt-2 w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Gabung Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- == HERO SECTION == -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://firebasestorage.googleapis.com/v0/b/gemini-ui-360a0.appspot.com/o/gemini%2Fgenerative%2F1729168694038_0.jpg?alt=media&token=1d01f9ab-6140-410c-bc3c-2357945d9472" 
+                     alt="UKM Musik performance" class="w-full h-full object-cover" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/111827/FFFFFF?text=UKM+Musik+Performance';">
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-wider leading-tight">
+                    Tempat Berkumpulnya <span class="text-amber-500">Mahasiswa Pecinta Musik</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+                    Kembangkan bakatmu bersama kami di UKM Musik Kampus, dari panggung akustik hingga festival besar!
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#galeri" class="bg-transparent border-2 border-amber-500 text-amber-500 font-bold py-3 px-8 rounded-full hover:bg-amber-500 hover:text-white transition duration-300 text-lg">
+                        Lihat Kegiatan Kami
+                    </a>
+                    <a href="#pendaftaran" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg">
+                        Gabung Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- == TENTANG KAMI == -->
+        <section id="tentang" class="py-20 lg:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">Tentang UKM Musik</h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Wadah bagi mahasiswa untuk menyalurkan, mengembangkan, dan mengekspresikan minat serta bakat di bidang musik.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500 mx-auto mb-4">
+                            <i data-feather="users" class="text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Kolaborasi</h3>
+                        <p class="text-gray-400">Kami percaya musik terindah lahir dari kerjasama. Belajar, berkarya, dan tampil bersama dalam harmoni.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500 mx-auto mb-4">
+                            <i data-feather="sun" class="text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Kreativitas</h3>
+                        <p class="text-gray-400">Bebaskan imajinasimu! Ciptakan aransemen unik, tulis lagumu sendiri, dan temukan warna musikmu di sini.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-amber-500 mx-auto mb-4">
+                            <i data-feather="bar-chart-2" class="text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Pengembangan Skill</h3>
+                        <p class="text-gray-400">Dari dasar hingga mahir, kami menyediakan sesi latihan rutin, workshop, dan mentoring untuk mengasah kemampuanmu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == DIVISI DAN ROLE == -->
+        <section id="divisi" class="py-20 lg:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">Kenali Peran di Dunia Musik</h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Temukan posisimu dan jadilah bagian penting dari setiap harmoni yang kami ciptakan.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="group flex flex-col items-center p-6 bg-gray-700 rounded-xl hover:bg-amber-500 transition duration-300">
+                        <i data-feather="mic" class="h-12 w-12 text-amber-500 group-hover:text-white transition duration-300"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Penyanyi</h3>
+                    </div>
+                    <div class="group flex flex-col items-center p-6 bg-gray-700 rounded-xl hover:bg-amber-500 transition duration-300">
+                        <i data-feather="git-branch" class="h-12 w-12 text-amber-500 group-hover:text-white transition duration-300 -rotate-45"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Gitaris</h3>
+                    </div>
+                    <div class="group flex flex-col items-center p-6 bg-gray-700 rounded-xl hover:bg-amber-500 transition duration-300">
+                        <i data-feather="git-commit" class="h-12 w-12 text-amber-500 group-hover:text-white transition duration-300"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Bassis</h3>
+                    </div>
+                    <div class="group flex flex-col items-center p-6 bg-gray-700 rounded-xl hover:bg-amber-500 transition duration-300">
+                        <i data-feather="circle" class="h-12 w-12 text-amber-500 group-hover:text-white transition duration-300"></i>
+                        <h3 class="mt-4 text-lg font-bold text-white">Drummer</h3>
+                    </div>
+                    <div class="group flex flex-col items-center p-6 bg-gray-700 rounded-xl hover:bg-amber-500 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6h6v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm6 0c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10h6"></path></svg>
+                        <h3 class="mt-4 text-lg font-bold text-white">Keyboardis</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- == GALERI == -->
+        <section id="galeri" class="py-20 lg:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">Galeri Momen Kami</h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Setiap nada, setiap panggung, setiap tawa. Inilah cerita kami dalam gambar.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://firebasestorage.googleapis.com/v0/b/gemini-ui-360a0.appspot.com/o/gemini%2Fgenerative%2F1729168694038_0.jpg?alt=media&token=1d01f9ab-6140-410c-bc3c-2357945d9472" alt="Performance panggung UKM Musik" onerror="this.onerror=null;this.src='https://placehold.co/600x800/1f2937/FFFFFF?text=Event+1';">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x400/1f2937/FFFFFF?text=Workshop" alt="Workshop musik">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                             <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://firebasestorage.googleapis.com/v0/b/gemini-ui-360a0.appspot.com/o/gemini%2Fgenerative%2F1729168694038_1.jpg?alt=media&token=4042295a-c95a-4952-b91c-99d821361c47" alt="Sesi latihan UKM Musik" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/FFFFFF?text=Latihan+1';">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x800/1f2937/FFFFFF?text=Akustikan" alt="Sesi akustik">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x800/1f2937/FFFFFF?text=Kolaborasi" alt="Kolaborasi dengan UKM lain">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x400/1f2937/FFFFFF?text=Kumpul+Bareng" alt="Kebersamaan anggota">
+                        </div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x400/1f2937/FFFFFF?text=Latihan+2" alt="Latihan band">
+                        </div>
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg shadow-lg transform hover:scale-105 transition duration-300" src="https://placehold.co/600x800/1f2937/FFFFFF?text=Event+2" alt="Pensi kampus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- == EVENT == -->
+        <section id="event" class="py-20 lg:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">Event & Kegiatan</h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Kami tidak hanya berlatih di studio. Inilah panggung-panggung yang kami ramaikan!</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/111827/FFFFFF?text=Acoustic+Night" class="w-full h-48 object-cover" alt="Acoustic Night">
+                        <div class="p-6">
+                            <p class="text-amber-500 text-sm font-semibold">Bulanan</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Acoustic Night</h3>
+                            <p class="text-gray-400 mt-2">Malam santai penuh alunan musik akustik di sudut-sudut favorit kampus.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/111827/FFFFFF?text=Campus+Fest" class="w-full h-48 object-cover" alt="Campus Fest">
+                        <div class="p-6">
+                            <p class="text-amber-500 text-sm font-semibold">Tahunan</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Konser Kampus</h3>
+                            <p class="text-gray-400 mt-2">Menjadi bintang utama dalam festival musik terbesar di kampus kita.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/111827/FFFFFF?text=Music+Workshop" class="w-full h-48 object-cover" alt="Music Workshop">
+                        <div class="p-6">
+                            <p class="text-amber-500 text-sm font-semibold">Semesteran</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Music Workshop</h3>
+                            <p class="text-gray-400 mt-2">Belajar langsung dari para ahli dan musisi profesional di bidangnya.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <p class="text-lg text-gray-300">Dan masih banyak lagi! Kalender kegiatan mendatang akan segera diumumkan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- == PENDAFTARAN == -->
+        <section id="pendaftaran" class="py-20 lg:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-white">Bergabunglah dengan Keluarga Kami</h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Siap untuk membuat musik dan kenangan tak terlupakan? Isi formulir di bawah ini!</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <form id="registration-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="nama" class="block mb-2 text-sm font-medium text-gray-300">Nama Lengkap</label>
+                                <input type="text" id="nama" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Nama Kamu" required>
+                            </div>
+                            <div>
+                                <label for="nim" class="block mb-2 text-sm font-medium text-gray-300">NIM</label>
+                                <input type="text" id="nim" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Nomor Induk Mahasiswa" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="jurusan" class="block mb-2 text-sm font-medium text-gray-300">Jurusan</label>
+                            <input type="text" id="jurusan" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Contoh: Teknik Informatika" required>
+                        </div>
+                        <div class="mb-6">
+                             <label for="role" class="block mb-2 text-sm font-medium text-gray-300">Role yang Diminati</label>
+                             <select id="role" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5">
+                                <option>Pilih Role</option>
+                                <option>Penyanyi</option>
+                                <option>Gitaris</option>
+                                <option>Bassis</option>
+                                <option>Drummer</option>
+                                <option>Keyboardis</option>
+                             </select>
+                        </div>
+                        <div class="mb-6">
+                             <label for="alasan" class="block mb-2 text-sm font-medium text-gray-300">Alasan Bergabung</label>
+                             <textarea id="alasan" rows="4" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5" placeholder="Ceritakan kenapa kamu tertarik bergabung..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full text-white bg-amber-500 hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-800 font-bold rounded-lg text-lg px-5 py-3 text-center">Kirim Pendaftaran</button>
+                    </form>
+                    <div id="success-message" class="hidden mt-4 p-4 text-sm text-green-400 bg-green-900/50 rounded-lg" role="alert">
+                      <span class="font-medium">Pendaftaran Berhasil!</span> Terima kasih sudah mendaftar. Kami akan segera menghubungimu.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- == FOOTER == -->
+    <footer id="kontak" class="bg-gray-800">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">UKM Musik</h3>
+                    <p class="text-gray-400">Jl. Kampus Perjuangan No. 123,<br>Kota Pendidikan, 40123</p>
+                    <p class="text-gray-400 mt-2">sekretariat@ukmmusikkampus.ac.id</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Link Cepat</h3>
+                    <ul>
+                        <li><a href="#tentang" class="text-gray-400 hover:text-amber-500">Tentang Kami</a></li>
+                        <li class="mt-2"><a href="#event" class="text-gray-400 hover:text-amber-500">Event</a></li>
+                        <li class="mt-2"><a href="#pendaftaran" class="text-gray-400 hover:text-amber-500">Pendaftaran</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i data-feather="youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-500"><i data-feather="message-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                &copy; 2025 UKM Musik [Nama Kampus]. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Inisialisasi Feather Icons
+        feather.replace();
+
+        // Logika untuk Menu Mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile saat link di-klik
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+        
+        // Logika untuk Form Pendaftaran
+        const form = document.getElementById('registration-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah form untuk refresh halaman
+            
+            // Di sini Anda bisa menambahkan logika untuk mengirim data ke Google Form atau backend
+            // Untuk sekarang, kita hanya akan menampilkan pesan sukses
+            
+            successMessage.classList.remove('hidden');
+            form.reset(); // Mengosongkan form setelah submit
+
+            // Sembunyikan pesan setelah beberapa detik
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
